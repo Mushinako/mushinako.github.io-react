@@ -59,7 +59,7 @@ class WhoIAm extends React.Component<{}, { pre: string, post: string, postChoice
     return (
       <div id="who-i-am">
         <h1 className="i-am">{this.state.pre}</h1>
-        <h1 className="i-am">{this.state.post}</h1>
+        <h1 className="i-am">{this.fillChoice(this.state.post)}</h1>
       </div>
     )
   }
