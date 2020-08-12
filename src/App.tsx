@@ -14,7 +14,7 @@ class Name extends React.Component {
 
 class WhoIAm extends React.Component<{}, { pre: string, post: string, postChoices: string[], postId: number }> {
   timer?: NodeJS.Timeout;
-  fillLength?: number;
+  fillLength: number;
 
   constructor(props: Record<string, string>) {
     super(props);
@@ -30,11 +30,11 @@ class WhoIAm extends React.Component<{}, { pre: string, post: string, postChoice
       ],
       postId: 0
     };
+    this.fillLength = Math.max(3, ...this.state.postChoices.map((val: string): number => val.length));
   }
 
   componentDidMount(): void {
     this.timer = setInterval((): void => this.nextPost(), 2000);
-    this.fillLength = Math.max(3, ...this.state.postChoices.map((val: string): number => val.length));
   }
 
   componentWillUnmount(): void {
@@ -43,7 +43,7 @@ class WhoIAm extends React.Component<{}, { pre: string, post: string, postChoice
   }
 
   fillChoice(s: string): string {
-    return s + " ".repeat(this.fillLength! - s.length);
+    return s + " ".repeat(this.fillLength - s.length);
   }
 
   nextPost() {
