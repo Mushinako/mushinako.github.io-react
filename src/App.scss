@@ -8,10 +8,6 @@ $large-font: 3rem;
   justify-content: center;
 }
 
-%in-line {
-  display: inline;
-}
-
 %normal-font {
   font-family: -apple-system,
     BlinkMacSystemFont,
@@ -47,8 +43,9 @@ $large-font: 3rem;
 }
 
 .i-am {
-  @extend %in-line;
   @extend %monospace-font;
+  display: inline;
+  white-space: pre-wrap;
 }
 
 .under-construction-pic {
