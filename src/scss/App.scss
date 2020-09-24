@@ -1,0 +1,33 @@
+@import "vars";
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-color: $soft-white;
+
+  &.black {
+    background-color: $amoled-black;
+  }
+}
+
+#main {
+  @extend %fill-and-center;
+}
+
+
+// #name {
+//   font-size: $large-font;
+// }
+
+// .i-am {
+//   @extend %monospace-font;
+//   display: inline;
+//   white-space: pre-wrap;
+// }
+
+// .under-construction-pic {
+//   width: 60%;
+//   pointer-events: none;
+// }

@@ -1,4 +1,9 @@
+$soft-white: #eeeeee;
+$dark-grey: #282c34;
+$amoled-black: #000000;
+
 $large-font: 3rem;
+$big-screen: 600px;
 
 %fill-and-center {
   height: 100vh;
@@ -28,27 +33,16 @@ $large-font: 3rem;
     monospace;
 }
 
-.App {
-  text-align: center;
+%container {
+  width: 100%;
+
+  @media screen and (min-width: $big-screen) {
+    width: 70%;
+  }
 }
 
-#main {
-  @extend %fill-and-center;
-  background-color: #282c34;
-  color: #eeeeee;
-}
-
-#name {
-  font-size: $large-font;
-}
-
-.i-am {
-  @extend %monospace-font;
-  display: inline;
-  white-space: pre-wrap;
-}
-
-.under-construction-pic {
-  width: 60%;
-  pointer-events: none;
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
