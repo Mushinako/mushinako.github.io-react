@@ -1,6 +1,7 @@
 import React from 'react';
 import './scss/App.scss';
-import './scss/nav.scss';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 // class WhoIAm extends React.Component<{}, { pre: string, post: string, postChoices: string[], postId: number }> {
 //   timer?: NodeJS.Timeout;
@@ -67,20 +68,6 @@ import './scss/nav.scss';
 //   }
 // }
 
-class Header extends React.Component {
-  render(): JSX.Element {
-    return (
-      <nav className="nav-bar">
-        <div className="nav-elements">
-          <div className="nav-el"><a href="/#">Mushinako</a></div>
-          <div className="nav-el"><a href="https://github.com/Mushinako">GitHub</a></div>
-          <div className="nav-el"><a href="/#">Placeholder</a></div>
-        </div>
-      </nav>
-    )
-  }
-}
-
 function App(): JSX.Element {
   return (
     <div className="App">
@@ -89,6 +76,9 @@ function App(): JSX.Element {
       </header>
       <main id="main">
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
